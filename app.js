@@ -26,8 +26,7 @@ const tournaments = {
     ], 
     roland: [
         ["Nicolas Moreno De Alboran", "Fabio Fognini"],
-        ["Cristian Garin", "Harold Mayot"], 
-        ["Tommy Paul", "Roberto Bautista Agut"]
+        ["Cristian Garin", "Harold Mayot"]
     ],
 };
 
