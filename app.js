@@ -21,8 +21,24 @@ const tournaments = {
     roland: [
         ["Nicolas Moreno De Alboran", "Cristian Garin"]
     ],
+    epl: [
+        ["", ""]
+    ],
+    uefa_europa: [
+        ["", ""]
+    ],
+    mls: [
+        ["", ""]
+    ],
+    nba: [
+        ["", ""]
+    ],
+    ipl:[
+        ["", ""]
+    ],
 };
 
+// Function is to get the data from the db. this is for tennis
 async function getMatchupData(matchups, tournament) {
     const connection = await mysql.createConnection({
         host: process.env.MYSQL_HOST,
@@ -54,6 +70,14 @@ async function getMatchupData(matchups, tournament) {
     return results;
 }
 
+// function to get football data from db.
+async function getFootballMatchupData(matchups, tournament){}
+
+// function to get basketball data from db.
+async function getBasketballMatchupData(matchups, tournament){}
+
+async function getCricketMatchupData(matchups, tournament){}
+
 // Redirect root to /home
 app.get('/', (req, res) => {
     res.redirect('/home');
@@ -64,21 +88,51 @@ app.get('/home', (req, res) => {
     res.render('home');  // Make sure views/home.ejs exists
 });
 
-// Serve tournament predictions
-app.get('/predictions', async (req, res) => {
+// Serve tennis tournament predictions
+app.get('/tennis', async (req, res) => {
     const hamburgCards = await getMatchupData(tournaments.hamburg, "hamburg");
     const genevaCards = await getMatchupData(tournaments.geneva, "geneva");
     const rolandCards = await getMatchupData(tournaments.roland, "roland");
-    const cards = [...hamburgCards, ...genevaCards, ...rolandCards];
-    res.render('index', { cards });
+    const cardsTennis = [...hamburgCards, ...genevaCards, ...rolandCards];
+    res.render('index_tennis', { cardsTennis });
 });
 
+// Serve the Football Tournament Predictions
+app.get('/football', async(req, res) => {
+    const eplCards = await getMatchupData(tournaments.epl, "epl");
+    const uefa_europaCards = await getMatchupData(tournaments.uefa_europa, "uefa_europa");
+    const mlsCards = await getMatchupData(tournaments.mls, "mls");
+    // replace the above line with the below one once the function to get the db is written.
+    //const eplCards = await getFootballMatchupData(tournaments.epl, "epl");
+    const cardsFootball = [...eplCards, ...uefa_europaCards, ...mlsCards];
+    res.render('index_football', { cardsFootball });
+});
 
+// Serve the Basketball Tournament Predictions
+app.get('/basketball', async(req, res) => {
+    const nbaCards = await getMatchupData(tournaments.nba, "nba");
+    // replace the above line with the below one once the function to get the db is written.
+    //const nbaCards = await getBasketballMatchupData(tournaments.nba, "nba");
+    const cardsBasketball = [...nbaCards];
+    res.render('index_basketball', { cardsBasketball });
+});
+
+// Serve the Cricket Tournamnet Predictions
+app.get('/cricket', async(req, res) => {
+    const iplCards = await getMatchupData(tournaments.ipl, "ipl");
+    // replace the above line with the below one once the function to get the db is written.
+    //const iplCards = await getCricketMatchupData(tournaments.ipl, "ipl");
+    const cardsCricket = [...iplCards];
+    res.render('index_cricket', {cardsCricket});
+});
+
+// Serve the account page
+app.get('/account', async(req, res) => {
+    res.render('account_page');
+});
 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
-
-
