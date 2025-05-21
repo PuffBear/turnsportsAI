@@ -11,22 +11,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Matchups by tournament
 const tournaments = {
     hamburg: [
-        ["Giovanni Mpetshi Perricard", "Alexander Bublik"],
-        ["Alexander Zverev", "Aleksandar Kovacevic"],
-        ["Francisco Cerundolo", "Pedro Martinez"],
-        ["Tomas Martin Etcheverry", "Francisco Comesana"],
-        ["Alejandro Davidovich Fokina", "Gael Monfils"],
-        ["Marcos Giron", "Roberto Bautista Agut"]
+        ["Alexander Zverev", "Alexandre Muller"],
+        ["Francisco Cerundolo", "Jiri Lehecka"]
     ],
     geneva: [
-        ["Matteo Arnaldi", "Hugo Gaston"],
-        ["Marton Fucsovics", "Zizou Bergs"],
-        ["Arthur Rinderknech", "Miomir Kecmanovic"],
-        ["Arthur Cazaux", "Hubert Hurkacz"]
+        ["Matteo Arnaldi", "Fabian Marozsan"],
+        ["Arthur Rinderknech", "Hubert Hurkacz"]
     ], 
     roland: [
-        ["Nicolas Moreno De Alboran", "Fabio Fognini"],
-        ["Cristian Garin", "Harold Mayot"]
+        ["Nicolas Moreno De Alboran", "Cristian Garin"]
     ],
 };
 
