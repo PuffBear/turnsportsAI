@@ -11,12 +11,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Matchups by tournament
 const tournaments = {
     hamburg: [
-        ["Alexander Zverev", "Alexandre Muller"],
-        ["Francisco Cerundolo", "Jiri Lehecka"]
+        ["Tomas Martin Etcheverry", "Jiri Lehecka"],
+        ["Luciano Darderi", "Andrey Rublev"],
+        ["Flavio Cobolli", "Roberto Bautista Agut"]
     ],
     geneva: [
-        ["Matteo Arnaldi", "Fabian Marozsan"],
-        ["Arthur Rinderknech", "Hubert Hurkacz"]
+        ["Matteo Arnaldi", "Novak Djokovic"],
+        ["Taylor Fritz", "Hubert Hurkacz"],
+        ["Karen Khachanov", "Sebastian Ofner"],
+        ["Alexei Popyrin", "Cameron Norrie"]
     ], 
     roland: [
         ["Nicolas Moreno De Alboran", "Cristian Garin"]
