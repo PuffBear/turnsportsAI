@@ -11,18 +11,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Matchups by tournament
 const tournaments = {
     hamburg: [
-        ["Tomas Martin Etcheverry", "Jiri Lehecka"],
-        ["Luciano Darderi", "Andrey Rublev"],
-        ["Flavio Cobolli", "Roberto Bautista Agut"]
+        ["Flavio Cobolli", "Andrey Rublev"]
     ],
     geneva: [
-        ["Matteo Arnaldi", "Novak Djokovic"],
-        ["Taylor Fritz", "Hubert Hurkacz"],
-        ["Karen Khachanov", "Sebastian Ofner"],
-        ["Alexei Popyrin", "Cameron Norrie"]
+        ["Hubert Hurkacz", "Novak Djokovic"]
     ], 
     roland: [
-        ["Nicolas Moreno De Alboran", "Cristian Garin"]
+        ["Jannik Sinner", "Arthur Rinderknech"],
+        ["Jiri Lehecka", "Jordan Thompson"],
+        ["Alexander Bublik", "James Duckworth"],
+        ["Alexandre Muller", "Jakub Mensik"],
+        ["Mattia Bellucci", "Jack Draper"],
+        ["Alexander Zverev", "Learner Tien"],
+        ["Marcos Giron", "Tallon Griekspoor"],
+        ["Daniil Medvedev", "Cameron Norrie"],
+        ["Denis Shapovalov", "Pedro Martinez"],
+        ["Tomas Machac", "Quentin Halys"],
+        ["Miomir Kecmanovic", "Sebastian Baez"],
+        ["Roberto Bautista Agut", "Holger Rune"],
     ],
     epl: [
         ["", ""]
