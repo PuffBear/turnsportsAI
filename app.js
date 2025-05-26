@@ -26,9 +26,13 @@ const tournaments = {
         ["Marcos Giron", "Tallon Griekspoor"],
         ["Daniil Medvedev", "Cameron Norrie"],
         ["Denis Shapovalov", "Pedro Martinez"],
-        ["Tomas Machac", "Quentin Halys"],
         ["Miomir Kecmanovic", "Sebastian Baez"],
         ["Roberto Bautista Agut", "Holger Rune"],
+        ["Mariano Navone", "Brandon Nakashima"],
+        ["Alejandro Tabilo", "Arthur Cazaux"],
+        ["Ben Shelton", "Lorenzo Sonego"],
+        ["Stefanos Tsitsipas", "Tomas Martin Etcheverry"],
+        ["Fabian Marozsan", "Luca Nardi"],
     ],
     epl: [
         ["", ""]
