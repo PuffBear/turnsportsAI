@@ -11,24 +11,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Matchups by tournament
 const tournaments = {
     hamburg: [
-        ["Flavio Cobolli", "Andrey Rublev"]
+        ["", ""],
     ],
     geneva: [
-        ["Hubert Hurkacz", "Novak Djokovic"]
+        ["", ""],
     ], 
     roland: [
-        ["Jannik Sinner", "Richard Gasquet"],
-        ["Jiri Lehecka", "Alejandro Davidovich Fokina"],
-        ["Andrey Rublev", "Adam Walton"],
-        ["Gael Monfils", "Jack Draper"],
-        ["Flavio Cobolli", "Matteo Arnaldi"], 
-        ["Corentin Moutet", "Novak Djokovic"],
-        ["Miomir Kecmanovic", "Quentin Halys"],
-        ["Mariano Navone", "Reilly Opelka"],
-        ["Alejandro Tabilo", "Alexei Popyrin"],
-        ["Karen Khachanov", "Sebastian Ofner"],
-        ["Ben Shelton", "Hugo Gaston"],
-        ["Fabian Marozsan", "Carlos Alcaraz"],
+        ["Jannik Sinner", "Jiri Lehecka"],
+        ["Alexander Zverev", "Flavio Cobolli"],
+        ["Lorenzo Musetti", "Mariano Navone"],
+        ["Quentin Halys", "Holger Rune"],
+        ["Hamad Medjedovic", "Daniel Altmaier"],
+        ["Nuno Borges", "Alexei Popyrin"],
+        ["Karen Khachanov", "Tommy Paul"],
     ],
     epl: [
         ["", ""]
@@ -99,10 +94,8 @@ app.get('/home', (req, res) => {
 
 // Serve tennis tournament predictions
 app.get('/tennis', async (req, res) => {
-    const hamburgCards = await getMatchupData(tournaments.hamburg, "hamburg");
-    const genevaCards = await getMatchupData(tournaments.geneva, "geneva");
     const rolandCards = await getMatchupData(tournaments.roland, "roland");
-    const cardsTennis = [...hamburgCards, ...genevaCards, ...rolandCards];
+    const cardsTennis = [ ...rolandCards];
     res.render('index_tennis', { cardsTennis });
 });
 
