@@ -17,13 +17,13 @@ const tournaments = {
         ["", ""],
     ], 
     roland: [
-        ["Jannik Sinner", "Jiri Lehecka"],
-        ["Alexander Zverev", "Flavio Cobolli"],
-        ["Lorenzo Musetti", "Mariano Navone"],
-        ["Quentin Halys", "Holger Rune"],
-        ["Hamad Medjedovic", "Daniel Altmaier"],
-        ["Nuno Borges", "Alexei Popyrin"],
-        ["Karen Khachanov", "Tommy Paul"],
+        ["Jannik Sinner", "Andrey Rublev"],
+        ["Alexander Bublik", "Jack Draper"],
+        ["Alexander Zverev", "Tallon Griekspoor"],
+        ["Cameron Norrie", "Novak Djokovic"],
+        ["Lorenzo Musetti", "Holger Rune"],
+        ["Alexei Popyrin", "Tommy Paul"],
+        ["Ben Shelton", "Carlos Alcaraz"],
     ],
     epl: [
         ["", ""]
