@@ -17,9 +17,8 @@ const tournaments = {
         ["", ""],
     ], 
     roland: [
-        ["Jannik Sinner", "Alexander Bublik"],
-        ["Alexander Zverev", "Novak Djokovic"],
-        ["Tommy Paul", "Carlos Alcaraz"],
+        ["Jannik Sinner", "Novak Djokovic"],
+        ["Lorenzo Musetti", "Carlos Alcaraz"],
     ],
     epl: [
         ["", ""]
