@@ -10,10 +10,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Matchups by tournament
 const tournaments = {
-    hamburg: [
+    stuttgart: [
         ["", ""],
     ],
-    geneva: [
+    libema: [
         ["", ""],
     ], 
     roland: [
@@ -89,7 +89,9 @@ app.get('/home', (req, res) => {
 // Serve tennis tournament predictions
 app.get('/tennis', async (req, res) => {
     const rolandCards = await getMatchupData(tournaments.roland, "roland");
-    const cardsTennis = [ ...rolandCards];
+    const stuttgartCards = await getMatchupData(tournaments.stuttgart, "stuttgart");
+    const libemaCards = await getMatchupData(tournaments.libema, "libema");
+    const cardsTennis = [ ...rolandCards, ...stuttgartCards, ...libemaCards];
     res.render('index_tennis', { cardsTennis });
 });
 
