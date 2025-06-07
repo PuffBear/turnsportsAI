@@ -11,7 +11,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Matchups by tournament
 const tournaments = {
     stuttgart: [
-        ["", ""],
+        ["Learner Tien", "Yoshihito Nishioka"],
+        ["Alex Michelsen", "Gael Monfils"],
+        ["Denis Shapovalov", "Arthur Rinderknech"],
+        ["Quentin Halys", "Lorenzo Sonego"],
     ],
     libema: [
         ["", ""],
