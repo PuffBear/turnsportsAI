@@ -17,7 +17,10 @@ const tournaments = {
         ["Quentin Halys", "Lorenzo Sonego"],
     ],
     libema: [
-        ["", ""],
+        ["Alexei Popyrin", "Zizou Bergs"],
+        ["Roberto Bautista Agut", "Hubert Hurkacz"],
+        ["Otto Virtanen", "Tomas Martin Etcheverry"],
+        ["Rinky Hijikata", "Ugo Humbert"],
     ], 
     roland: [
         ["Jannik Sinner", "Carlos Alcaraz"],
