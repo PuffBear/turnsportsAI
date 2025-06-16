@@ -11,14 +11,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Matchups by tournament
 const tournaments = {
     stuttgart: [
-        ["Alexander Zverev", "Brandon Nakashima"],
-        ["Ben Shelton", "Jiri Lehecka"],
-        ["Marton Fucsovics", "Taylor Fritz"],
+        ["Alexander Zverev", "Ben Shelton"],
     ],
     libema: [
-        ["Daniil Medvedev", "Reilly Opelka"],
-        ["Gabriel Diallo", "Karen Khachanov"],
-        ["Nuno Borges", "Ugo Humbert"],
+        ["Zizou Bergs", "Reilly Opelka"],
+        ["Gabriel Diallo", "Ugo Humbert"]
     ], 
     epl: [
         ["", ""]
