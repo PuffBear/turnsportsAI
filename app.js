@@ -11,20 +11,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Matchups by tournament
 const tournaments = {
     stuttgart: [
-        ["Learner Tien", "Yoshihito Nishioka"],
-        ["Alex Michelsen", "Gael Monfils"],
-        ["Denis Shapovalov", "Arthur Rinderknech"],
-        ["Quentin Halys", "Lorenzo Sonego"],
+        ["Alexander Zverev", "Corentin Moutet"],
+        ["Marton Fucsovics", "Arthur Rinderknech"],
+        ["Quentin Halys", "Taylor Fritz"],
     ],
     libema: [
-        ["Alexei Popyrin", "Zizou Bergs"],
-        ["Roberto Bautista Agut", "Hubert Hurkacz"],
-        ["Otto Virtanen", "Tomas Martin Etcheverry"],
-        ["Rinky Hijikata", "Ugo Humbert"],
+        ["Daniil Medvedev", "Adrian Mannarino"],
+        ["Reilly Opelka", "Nicolas Jarry"],
+        ["Jordan Thompson", "Gabriel Diallo"],
+        ["Daniel Evans", "Ugo Humbert"],
     ], 
-    roland: [
-        ["Jannik Sinner", "Carlos Alcaraz"],
-    ],
     epl: [
         ["", ""]
     ],
@@ -94,10 +90,9 @@ app.get('/home', (req, res) => {
 
 // Serve tennis tournament predictions
 app.get('/tennis', async (req, res) => {
-    const rolandCards = await getMatchupData(tournaments.roland, "roland");
     const stuttgartCards = await getMatchupData(tournaments.stuttgart, "stuttgart");
     const libemaCards = await getMatchupData(tournaments.libema, "libema");
-    const cardsTennis = [ ...rolandCards, ...stuttgartCards, ...libemaCards];
+    const cardsTennis = [ ...stuttgartCards, ...libemaCards];
     res.render('index_tennis', { cardsTennis });
 });
 
