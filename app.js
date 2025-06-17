@@ -24,6 +24,9 @@ const tournaments = {
         ["Ugo Humbert", "Denis Shapovalov"],
         ["Marcos Giron", "Alexander Zverev"],
     ],
+    london : [
+        ["", ""],
+    ],
     epl: [
         ["", ""]
     ],
@@ -94,7 +97,8 @@ app.get('/home', (req, res) => {
 // Serve tennis tournament predictions
 app.get('/tennis', async (req, res) => {
     const halleCards = await getMatchupData(tournaments.halle, "halle")
-    const cardsTennis = [ ...halleCards];
+    const londonCards = await getMatchupData(tournaments.london, "london")
+    const cardsTennis = [ ...halleCards, ...londonCards];
     res.render('index_tennis', { cardsTennis });
 });
 
