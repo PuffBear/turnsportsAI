@@ -10,12 +10,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Matchups by tournament
 const tournaments = {
-    stuttgart: [
-        ["Alexander Zverev", "Taylor Fritz"],
+    halle: [
+        ["Jannik Sinner", "Yannick Hanfmann"],
+        ["Alexandre Muller", "Alexander Bublik"],
+        ["Fabian Marozsan", "Miomir Kecmanovic"],
+        ["Andrey Rublev", "Sebastian Ofner"],
+        ["Pedro Martinez", "Tomas Martin Etcheverry"],
+        ["Zizou Bergs", "Karen Khachanov"],
+        ["Francisco Cerundolo", "Alex Michelsen"],
+        ["Stefanos Tsitsipas", "Luciano Darderi"],
+        ["Quentin Halys", "Benjamin Bonzi"],
+        ["Daniel Altmaier", "Daniil Medvedev"],
+        ["Ugo Humbert", "Denis Shapovalov"],
+        ["Marcos Giron", "Alexander Zverev"],
     ],
-    libema: [
-        ["Zizou Bergs", "Gabriel Diallo"],
-    ], 
     epl: [
         ["", ""]
     ],
@@ -85,9 +93,8 @@ app.get('/home', (req, res) => {
 
 // Serve tennis tournament predictions
 app.get('/tennis', async (req, res) => {
-    const stuttgartCards = await getMatchupData(tournaments.stuttgart, "stuttgart");
-    const libemaCards = await getMatchupData(tournaments.libema, "libema");
-    const cardsTennis = [ ...stuttgartCards, ...libemaCards];
+    const halleCards = await getMatchupData(tournaments.halle, "halle")
+    const cardsTennis = [ ...halleCards];
     res.render('index_tennis', { cardsTennis });
 });
 
