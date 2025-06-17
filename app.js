@@ -25,7 +25,15 @@ const tournaments = {
         ["Marcos Giron", "Alexander Zverev"],
     ],
     london : [
-        ["", ""],
+        ["Brandon Nakashima", "Giovanni Mpetshi Perricard"],
+        ["Alexei Popyrin", "Aleksandar Vukic"],
+        ["Arthur Rinderknech", "Ben Shelton"],
+        ["Jordan Thompson", "Jaume Munar"],
+        ["Carlos Alcaraz", "Alejandro Davidovich Fokina"],
+        ["Roberto Bautista Agut", "Nuno Borges"],
+        ["Cameron Norrie", "Jakub Mensik"],
+        ["Gabriel Diallo", "Billy Harris"],
+        ["Corentin Moutet", "Taylor Fritz"],
     ],
     epl: [
         ["", ""]
